@@ -1,0 +1,15 @@
+C:\Users\RADHE SALES\source\repos\Calculater\Calculater\bin\Debug\net6.0\Calculater.exe
+C:\Users\RADHE SALES\source\repos\Calculater\Calculater\bin\Debug\net6.0\Calculater.deps.json
+C:\Users\RADHE SALES\source\repos\Calculater\Calculater\bin\Debug\net6.0\Calculater.runtimeconfig.json
+C:\Users\RADHE SALES\source\repos\Calculater\Calculater\bin\Debug\net6.0\Calculater.dll
+C:\Users\RADHE SALES\source\repos\Calculater\Calculater\bin\Debug\net6.0\Calculater.pdb
+C:\Users\RADHE SALES\source\repos\Calculater\Calculater\obj\Debug\net6.0\Calculater.csproj.AssemblyReference.cache
+C:\Users\RADHE SALES\source\repos\Calculater\Calculater\obj\Debug\net6.0\Calculater.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RADHE SALES\source\repos\Calculater\Calculater\obj\Debug\net6.0\Calculater.AssemblyInfoInputs.cache
+C:\Users\RADHE SALES\source\repos\Calculater\Calculater\obj\Debug\net6.0\Calculater.AssemblyInfo.cs
+C:\Users\RADHE SALES\source\repos\Calculater\Calculater\obj\Debug\net6.0\Calculater.csproj.CoreCompileInputs.cache
+C:\Users\RADHE SALES\source\repos\Calculater\Calculater\obj\Debug\net6.0\Calculater.dll
+C:\Users\RADHE SALES\source\repos\Calculater\Calculater\obj\Debug\net6.0\refint\Calculater.dll
+C:\Users\RADHE SALES\source\repos\Calculater\Calculater\obj\Debug\net6.0\Calculater.pdb
+C:\Users\RADHE SALES\source\repos\Calculater\Calculater\obj\Debug\net6.0\Calculater.genruntimeconfig.cache
+C:\Users\RADHE SALES\source\repos\Calculater\Calculater\obj\Debug\net6.0\ref\Calculater.dll
