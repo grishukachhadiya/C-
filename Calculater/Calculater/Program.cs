@@ -1,4 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.Collections.Specialized;
+
 float num1 = 0; float num2 = 0;
 
 Console.WriteLine("\t\t\t   Calculator");
@@ -34,6 +36,11 @@ switch(Console.ReadLine())
         break;
 
     case "4":
+        while(num2==0)
+            {
+            Console.WriteLine("\n\n Enter number which is not zero");
+            num2=float.Parse(Console.ReadLine());
+            }
         Console.WriteLine(" result : " + (num1 / num2));
         break;
     default: Console.WriteLine("This number is not a Correct Number");
