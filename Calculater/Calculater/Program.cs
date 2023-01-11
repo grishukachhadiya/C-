@@ -1,56 +1,104 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Collections.Specialized;
-
-float num1 = 0; float num2 = 0;
-
-Console.WriteLine("\t\t\t   Calculator");
-Console.WriteLine("\t\t\t -------------------\n");
+using System;
 
 
-Console.WriteLine("Enter no. 1 : ");
-num1 = float.Parse(Console.ReadLine());
-
-Console.WriteLine("Enter no. 2 : ");
-num2 = float.Parse(Console.ReadLine());
-
-
-Console.WriteLine("\n Chooe Operations");
-Console.WriteLine("1. add");
-Console.WriteLine("2. sub");
-Console.WriteLine("3. mul");
-Console.WriteLine("4. div");
-
-
-switch(Console.ReadLine())
+namespace Calculator
 {
-    case "1":
-        Console.WriteLine(" result : " + (num1 + num2));
-        break;
+    class Calculator
+    {
+        public static double DoOperation(double num1, double num2, string op)
+        {
+            double result = double.NaN;
 
-    case "2":
-        Console.WriteLine(" result : " + (num1 - num2));
-        break;
-
-    case "3":
-        Console.WriteLine(" result : " + (num1 * num2));
-        break;
-
-    case "4":
-        while(num2==0)
+            switch(op)
             {
-            Console.WriteLine("\n\n Enter number which is not zero");
-            num2=float.Parse(Console.ReadLine());
+                case "1": result = num1 + num2;
+                    break;
+                    
+                case "2": result = num1 - num2;
+                    break;
+
+                case "3": result = num1 * num2;
+                    break;
+
+                case "4": 
+                    if(num2!=0) {
+                        result = num1 / num2;
+                    }
+
+                    break;
+
+                default: break;
+
             }
-        Console.WriteLine(" result : " + (num1 / num2));
-        break;
-    default: Console.WriteLine("This number is not a Correct Number");
+            return result;
+        }
+    }
 
-        break;
 
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            bool endApp = false;
+
+            Console.WriteLine("\t\t\t\t  Calculator App");
+            Console.WriteLine("\t\t\t\t -----------------");
+
+            while(!endApp)
+            {
+                string numInput1 = "";
+                string numInput2 = "";
+                double cleanInput1 = 0;
+                double cleanInput2 = 0;
+                string op = "";
+                double result;
+
+
+                Console.WriteLine("\n \t =>Enter First Number and Press Enter : ");
+                numInput1 = Console.ReadLine();
+
+
+                while(!double.TryParse(numInput1, out cleanInput1))
+                {
+                    Console.WriteLine("\n \t ==>Entered num is not correct please enter correct number");
+                    numInput1 = Console.ReadLine();
+                };
+
+                Console.WriteLine("\n \t =>Enter Second Number and Press Enter : ");
+                numInput2 = Console.ReadLine();
+
+
+                while (!double.TryParse(numInput2, out cleanInput2))
+                {
+                    Console.WriteLine("\n \t ==>Entered num is not correct please enter correct number");
+                    numInput2 = Console.ReadLine();
+                };
+
+
+                Console.WriteLine("\n\n  =>Choose Number for whichever operation you want to perform : ");
+                Console.WriteLine("1. Addition");
+                Console.WriteLine("2. Subtraction");
+                Console.WriteLine("3. Multiplication");
+                Console.WriteLine("4. Division");
+                Console.WriteLine("5. End Operation");
+                Console.WriteLine("Enter Number : ");
+
+                op = Console.ReadLine();
+
+                if(op=="5")
+                {
+                    endApp = true;
+                }
+
+                result = Calculator.DoOperation(cleanInput1, cleanInput2, op);
+
+                Console.WriteLine("\n\n =>Answer is : " + result);
+
+
+
+            }
+        }
+    }
 }
-
-
-
-
-
-
