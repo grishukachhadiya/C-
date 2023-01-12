@@ -55,17 +55,19 @@ namespace Calculator
                 string op = "";
                 double result;
 
-
+                //take input of number 1
                 Console.WriteLine("\n \t =>Enter First Number and Press Enter : ");
                 numInput1 = Console.ReadLine();
 
 
-                while(!double.TryParse(numInput1, out cleanInput1))
+                while(!double.TryParse(numInput1, out cleanInput1))       // TryParse method :- if parsing is done then it return true and its value is after parsing put  into the cleanInput else it return false 
                 {
                     Console.WriteLine("\n \t ==>Entered num is not correct please enter correct number");
                     numInput1 = Console.ReadLine();
                 };
 
+
+                //take input of number 2
                 Console.WriteLine("\n \t =>Enter Second Number and Press Enter : ");
                 numInput2 = Console.ReadLine();
 
@@ -76,7 +78,7 @@ namespace Calculator
                     numInput2 = Console.ReadLine();
                 };
 
-
+                //operations
                 Console.WriteLine("\n\n  =>Choose Number for whichever operation you want to perform : ");
                 Console.WriteLine("1. Addition");
                 Console.WriteLine("2. Subtraction");
@@ -87,11 +89,13 @@ namespace Calculator
 
                 op = Console.ReadLine();
 
+
+                //try and catch block
                 try
                 {
                     result = Calculator.DoOperation(cleanInput1, cleanInput2, op);
 
-                    if (double.IsNaN(result))
+                    if (double.IsNaN(result))     
                     {
                         Console.WriteLine("This is not a number");
                     }
