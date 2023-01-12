@@ -82,22 +82,39 @@ namespace Calculator
                 Console.WriteLine("2. Subtraction");
                 Console.WriteLine("3. Multiplication");
                 Console.WriteLine("4. Division");
-                Console.WriteLine("5. End Operation");
+
                 Console.WriteLine("Enter Number : ");
 
                 op = Console.ReadLine();
 
-                if(op=="5")
+                try
+                {
+                    result = Calculator.DoOperation(cleanInput1, cleanInput2, op);
+
+                    if (double.IsNaN(result))
+                    {
+                        Console.WriteLine("This is not a number");
+                    }
+                    else
+                    {
+                        Console.WriteLine("\n\n =>Answer is : " + result);
+                    }
+
+                   
+
+
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine("Hey error is there ");
+                }
+
+
+                Console.WriteLine("\n for End Operation press 5 or press any other key to continue :");
+                if(Console.ReadLine()=="5")
                 {
                     endApp = true;
                 }
-
-                result = Calculator.DoOperation(cleanInput1, cleanInput2, op);
-
-                Console.WriteLine("\n\n =>Answer is : " + result);
-
-
-
             }
         }
     }
